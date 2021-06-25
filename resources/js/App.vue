@@ -1,36 +1,22 @@
 <template>
-  <div>
-    <Header class="position-fixed w-100"></Header>
-    <div class="d-flex wrap-content">
-      <Sidebar class="sidebar"  style="width: 2.5rem;"></Sidebar>
-      <HelloWorld class="flex-grow-1"/>
-    </div>
+  <div class="container-fluid wrap-content position-relative">
+      <Header class="position-fixed w-100"></Header>
+      <router-view/>
   </div>
 </template>
 
 <script>
 import Header from './components/Header.vue'
-import HelloWorld from './components/HelloWorld.vue'
-import Sidebar from './components/Sidebar.vue'
-
 export default {
   name: 'App',
-  components: {
-    Header,
-    HelloWorld,
-    Sidebar,
-  }
+    components: {
+        Header,
+    }
 }
 </script>
+<style>
 
-<style class="scss">
 .wrap-content {
-  padding-top: 78px;
-}
-.sidebar {
-  height: calc(100vh - 78px);
-  position: fixed;
-  min-width: 72px !important;
-  max-width: 72px !important;
+    padding-top: 78px;
 }
 </style>
