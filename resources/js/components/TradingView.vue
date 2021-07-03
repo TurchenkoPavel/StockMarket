@@ -1,7 +1,7 @@
 <template>
-    <div class="tradingview-widget-container">
-      <div id="tradingview_a2b70">
-        <div :id="container_id"></div>
+    <div class="tradingview-widget-container h-100" >
+      <div id="tradingview_a2b70" class="h-100">
+        <div :id="container_id" class="h-100"></div>
       </div>
     </div>
 </template>
@@ -10,7 +10,7 @@
 const SCRIPT_ID = 'tradingview-widget-script';
 const CONTAINER_ID = 'vue-trading-view';
 export default {
-  name: "tradingView",
+  name: "TradingView",
     data: () => ({
         container_id: CONTAINER_ID
     }),
@@ -68,6 +68,11 @@ export default {
     mounted() {
       this.appendScript(this.initWidget);
     },
+    watch: {
+      options() {
+          this.appendScript(this.initWidget);
+      }
+    }
 }
 </script>
 

@@ -28,4 +28,9 @@ export default {
 a {
   font-size: 18px !important;
 }
+.router-link-active {
+    color: black !important;
+    text-decoration: underline;
+}
 </style>
+

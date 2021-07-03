@@ -1,18 +1,38 @@
 <template>
     <div>
-        Home
+        <trade-setup :symbol="selected.symbol" :trade_setup="selected.trade_setup"/>
+        <open-orders :open_orders="open_orders" v-model:selected_idx="selected_idx"/>
     </div>
 </template>
 
 <script>
-import HelloWorld from '../components/HelloWorld.vue'
-import Sidebar from '../components/Sidebar.vue'
+
+import TradeSetup from "../components/TradeSetup";
+import OpenOrders from "../components/OpenOrders";
+import axios from "axios";
 
 export default {
     name: "Home",
     components: {
-        HelloWorld,
-        Sidebar,
+        OpenOrders,
+        TradeSetup,
+    },
+    data: () => ({
+        open_orders: [],
+        selected_idx: 0,
+    }),
+    computed: {
+        selected() {
+            if (this.open_orders.length > 0) {
+                return this.open_orders[this.selected_idx];
+            }
+            return {};
+        },
+    },
+    created() {
+        axios.get('/api/get-open-orders').then(response => {
+            this.open_orders = response.data;
+        });
     }
 }
 </script>

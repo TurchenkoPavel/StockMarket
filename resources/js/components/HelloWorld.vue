@@ -16,7 +16,7 @@
 
 <script>
 import axios from 'axios';
-import tradingView from "./tradingView";
+import tradingView from "./TradingView";
 export default {
   name: 'HelloWorld',
   components: {

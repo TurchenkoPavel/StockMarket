@@ -1,0 +1,62 @@
+<template>
+    <div>
+        <div class="card">
+            <div class="card-header text-center">
+                MARKET ACTION
+            </div>
+            <div class="card-body">
+                <div class="row mb-2">
+                    <div class="col-auto">
+                        <fa v-if="state === 'Uptrend'" icon="arrow-alt-circle-up" class="text-success display-5"/>
+                        <fa v-if="state === 'Downtrend'" icon="arrow-alt-circle-down" class="text-danger display-5"/>
+                        <fa v-if="state === 'Sideways'" icon="arrows-alt-h" class="text-primary display-5"/>
+                    </div>
+                    <div class="col align-self-center fs-4"><b>{{ state }} Market</b></div>
+                </div>
+                <p class="card-text">{{ info }}</p>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Symbol</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Change</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <market-action-table-row v-for="item in symbols" :key="item.symbol" :symbol="item.symbol">
+                    </market-action-table-row>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+import axios from "axios";
+import MarketActionTableRow from "./MarketActionTableRow";
+
+export default {
+    name: "MarketAction",
+    components: {MarketActionTableRow},
+    data: () => ({
+        state: null,
+        info: null,
+        symbols: []
+    }),
+    created() {
+        axios.get('/api/get-market-state').then(response => {
+            this.state = response.data.state;
+            this.info = response.data.info;
+        });
+        axios.get('/api/get-market-action-symbols').then(response => {
+            this.symbols = response.data;
+        });
+    }
+}
+</script>
+
+<style scoped>
+
+</style>
