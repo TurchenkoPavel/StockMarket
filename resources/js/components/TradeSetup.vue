@@ -36,13 +36,15 @@
                                     <th scope="row">Market cap</th>
                                     <td> {{info.market_cap.fmt}} </td>
                                 </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <span class="fw-bolder">Trade Setup: </span>{{ trade_setup }}
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
-                    <div class="col-8"><trading-view v-if="symbol" :options="result_options"/></div>
-                </div>
-                <div class="row mt-2">
-                    <div class="col"><p><span class="fw-bolder">Trade Setup: </span>{{ trade_setup }}</p></div>
+                    <div class="col-8 trading-view-chart"><trading-view v-if="symbol" :options="result_options"/></div>
                 </div>
             </div>
         </div>
@@ -126,5 +128,8 @@ export default {
 </script>
 
 <style scoped>
+.trading-view-chart {
+    min-height: 500px;
+}
 
 </style>

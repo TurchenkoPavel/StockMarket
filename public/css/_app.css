@@ -10201,7 +10201,7 @@ textarea.form-control-lg {
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
-  border: 0 solid transparent;
+  border: 1 solid transparent;
   border-radius: 0.25rem;
 }
 .card > hr {
@@ -10256,7 +10256,7 @@ textarea.form-control-lg {
   padding: 1rem 1.25rem;
   margin-bottom: 0;
   background-color: #fff;
-  border-bottom: 0 solid transparent;
+  border-bottom: 1 solid transparent;
 }
 .card-header:first-child {
   border-radius: 0.25rem 0.25rem 0 0;
@@ -10265,7 +10265,7 @@ textarea.form-control-lg {
 .card-footer {
   padding: 1rem 1.25rem;
   background-color: #fff;
-  border-top: 0 solid transparent;
+  border-top: 1 solid transparent;
 }
 .card-footer:last-child {
   border-radius: 0 0 0.25rem 0.25rem;
@@ -20282,7 +20282,7 @@ body[data-theme=dark] .settings-toggle-option:first-child {
 
 .settings-panel {
   background: #fff;
-  border-left: 0 solid transparent;
+  border-left: 1 solid transparent;
   display: block;
   height: 100%;
   position: fixed;
@@ -21628,7 +21628,7 @@ a {
   background: #fff;
   background-color: #fff;
   background-clip: border-box;
-  border: 0 solid transparent;
+  border: 1 solid transparent;
   box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.05);
   border-radius: 0.25rem !important;
   margin-bottom: 2rem;
