@@ -17,13 +17,11 @@ mix
             require('autoprefixer'),
         ],
     })
-    .js('resources/js/main.js', 'public/js').vue()
-    .sass('resources/scss/_app.scss', 'public/css', [
-        //
-    ]);
+    .setPublicPath('/')
+    .js('resources/js/main.js', '/js').vue()
+    .sass('resources/scss/_app.scss', '/css');
 
 if (mix.inProduction()) {
-    mix.setResourceRoot('/public/')
     mix.version();
 }
 
