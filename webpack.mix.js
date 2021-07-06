@@ -12,16 +12,21 @@ const mix = require('laravel-mix');
  */
 
 mix
+    // .webpackConfig({
+    //     output: {
+    //         publicPath: '/public/',
+    //         filename: '[name].js',
+    //         chunkFilename: 'js/[name].js',
+    //     },
+    // })
     .options({
         postCss: [
             require('autoprefixer'),
         ],
     })
-    .js('resources/js/main.js', 'public/js').vue().extract(['vue', 'vuex', 'vue-router', 'vue-loader', 'axios', 'bootstrap', 'moment',
+    .js('resources/js/main.js', '/js').vue().extract(['vue', 'vuex', 'vue-router', 'vue-loader', 'axios', 'bootstrap', 'moment',
         '@fortawesome/vue-fontawesome', '@fortawesome/fontawesome-svg-core', '@fortawesome/free-solid-svg-icons', 'core-js', 'css-loader', '@vue/compiler-sfc'])
-    .sass('resources/scss/_app.scss', 'public/css', [
-        //
-    ]);
+    .sass('resources/scss/_app.scss', '/css');
 
 if (mix.inProduction()) {
     mix.version();
