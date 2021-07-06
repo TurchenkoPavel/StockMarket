@@ -21,3 +21,9 @@ mix
     .sass('resources/scss/_app.scss', 'public/css', [
         //
     ]);
+
+if (mix.inProduction()) {
+    mix.setResourceRoot('/public/')
+    mix.version();
+}
+
