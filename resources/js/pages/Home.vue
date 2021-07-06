@@ -1,7 +1,7 @@
 <template>
     <div>
         <trade-setup :symbol="selected.symbol" :trade_setup="selected.trade_setup"/>
-        <open-orders :open_orders="open_orders" v-model:selected_idx="selected_idx"/>
+        <open-orders :open_orders="open_orders" v-model:selected_idx="selected_idx" :is_loading="is_loading"/>
     </div>
 </template>
 
@@ -20,6 +20,7 @@ export default {
     data: () => ({
         open_orders: [],
         selected_idx: 0,
+        is_loading: false,
     }),
     computed: {
         selected() {
@@ -30,9 +31,10 @@ export default {
         },
     },
     created() {
+        this.is_loading = true;
         axios.get('/api/get-open-orders').then(response => {
             this.open_orders = response.data;
-        });
+        }).finally(() => {this.is_loading = false;});
     }
 }
 </script>

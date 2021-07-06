@@ -15,16 +15,27 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr
-                        v-for="(item, idx) in open_orders" :key="item.symbol"
-                        :class="{'table-active': idx === selected_idx}"
-                        @click="$emit('update:selected_idx', idx)"
-                    >
-                        <td scope="row">{{ item.symbol }}</td>
-                        <td>{{ item.order }}</td>
-                        <td>{{ item.stop }}</td>
-                        <td>{{ item.limit }}</td>
+                    <tr v-if="is_loading">
+                        <td colspan="4">
+                            <div class="text-center">
+                                <div class="spinner-border" role="status">
+                                    <span class="visually-hidden">Загрузка...</span>
+                                </div>
+                            </div>
+                        </td>
                     </tr>
+                    <template v-else>
+                        <tr
+                            v-for="(item, idx) in open_orders" :key="item.symbol"
+                            :class="{'table-active': idx === selected_idx}"
+                            @click="$emit('update:selected_idx', idx)"
+                        >
+                            <td scope="row">{{ item.symbol }}</td>
+                            <td>{{ item.order }}</td>
+                            <td>{{ item.stop }}</td>
+                            <td>{{ item.limit }}</td>
+                        </tr>
+                    </template>
                     </tbody>
                 </table>
             </div>
@@ -43,6 +54,10 @@ export default {
         selected_idx: {
             type: Number,
             default: () => 0
+        },
+        is_loading: {
+            type: Boolean,
+            default: () => false
         }
     }
 }

@@ -17,7 +17,14 @@ mix
             require('autoprefixer'),
         ],
     })
-    .js('resources/js/main.js', 'public/js').vue()
+    .js('resources/js/main.js', 'public/js').vue().extract(['vue', 'vuex', 'vue-router', 'vue-loader', 'axios', 'bootstrap', 'moment',
+        '@fortawesome/vue-fontawesome', '@fortawesome/fontawesome-svg-core', '@fortawesome/free-solid-svg-icons', 'core-js', 'css-loader', '@vue/compiler-sfc'])
     .sass('resources/scss/_app.scss', 'public/css', [
         //
     ]);
+
+if (mix.inProduction()) {
+    mix.version();
+}
+
+

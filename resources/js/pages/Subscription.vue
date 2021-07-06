@@ -9,12 +9,21 @@
                     <thead>
                     </thead>
                     <tbody>
-                    <tr
-                        v-for="(item, idx) in info" :key="idx"
-                    >
-                        <td scope="row">{{ item.text }}</td>
-                        <td>{{ item.link }}</td>
+                    <tr v-if="is_loading">
+                        <td colspan="4">
+                            <div class="text-center">
+                                <div class="spinner-border" role="status">
+                                    <span class="visually-hidden">Загрузка...</span>
+                                </div>
+                            </div>
+                        </td>
                     </tr>
+                    <template v-else>
+                        <tr v-for="(item, idx) in info" :key="idx">
+                            <td scope="row">{{ item.text }}</td>
+                            <td>{{ item.link }}</td>
+                        </tr>
+                    </template>
                     </tbody>
                 </table>
             </div>
@@ -28,12 +37,14 @@ import axios from "axios";
 export default {
     name: "Subscription",
     data: () => ({
-        info: []
+        info: [],
+        is_loading: false,
     }),
     created() {
+        this.is_loading = true;
         axios.get('/api/get-subscription').then(response => {
             this.info = response.data;
-        });
+        }).finally(() => {this.is_loading = false;});
     }
 }
 </script>
