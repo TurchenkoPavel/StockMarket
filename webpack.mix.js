@@ -12,13 +12,13 @@ const mix = require('laravel-mix');
  */
 
 mix
-    // .webpackConfig({
-    //     output: {
-    //         publicPath: '/public/',
-    //         filename: '[name].js',
-    //         chunkFilename: 'js/[name].js',
-    //     },
-    // })
+    .webpackConfig({
+        output: {
+            publicPath: '/public/',
+            filename: '[name].js',
+            chunkFilename: 'js/[name].js',
+        },
+    })
     .options({
         postCss: [
             require('autoprefixer'),
