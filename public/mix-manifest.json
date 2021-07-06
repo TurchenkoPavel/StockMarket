@@ -1,5 +1,5 @@
 {
-    "/js/main.js": "/public/js/main.js",
-    "/js/about.js": "/public/js/about.js",
-    "/css/_app.css": "/public/css/_app.css"
+    "/js/main.js": "/js/main.js",
+    "/js/about.js": "/js/about.js",
+    "/css/_app.css": "/css/_app.css"
 }
