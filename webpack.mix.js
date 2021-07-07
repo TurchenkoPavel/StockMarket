@@ -24,12 +24,13 @@ mix
             require('autoprefixer'),
         ],
     })
+    .copyDirectory('resources/js/assets', 'images')
     .js('resources/js/main.js', '/js').vue().extract(['vue', 'vuex', 'vue-router', 'vue-loader', 'axios', 'bootstrap', 'moment',
         '@fortawesome/vue-fontawesome', '@fortawesome/fontawesome-svg-core', '@fortawesome/free-solid-svg-icons', 'core-js', 'css-loader', '@vue/compiler-sfc'])
     .sass('resources/scss/_app.scss', '/css');
 
 if (mix.inProduction()) {
-    mix.version();
+    // mix.version();
 }
 
 
