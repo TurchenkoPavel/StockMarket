@@ -1,7 +1,7 @@
 <template>
     <div class="card">
         <div class="card-header text-center">
-            MEMBERSHIP
+            <strong>MEMBERSHIP</strong>
         </div>
         <div class="card-body">
             <form>
@@ -36,5 +36,7 @@ export default {
 </script>
 
 <style scoped>
-
+strong {
+    font-weight: 800 !important;
+}
 </style>

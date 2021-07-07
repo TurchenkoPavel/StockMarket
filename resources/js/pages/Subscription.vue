@@ -2,7 +2,7 @@
     <div>
         <div class="card">
             <div class="card-header text-center">
-                SUBSCRIPTIONS
+                <strong>SUBSCRIPTIONS</strong>
             </div>
             <div class="card-body">
                 <table class="table">
@@ -50,5 +50,7 @@ export default {
 </script>
 
 <style scoped>
-
+strong {
+    font-weight: 800 !important;
+}
 </style>
