@@ -3,6 +3,7 @@
       <Header class="position-fixed w-100"></Header>
       <Content class="mt-3"></Content>
       <Footer></Footer>
+      <notifications position="bottom right" :ignoreDuplicates="true" :duration="4000"/>
   </div>
 </template>
 
