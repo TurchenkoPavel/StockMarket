@@ -32,4 +32,7 @@ export default {
 .footer-wrap {
 }
 
+footer {
+    background-color: rgb(232, 252, 252) !important;
+}
 </style>

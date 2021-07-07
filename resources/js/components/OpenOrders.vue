@@ -2,7 +2,7 @@
     <div>
         <div class="card">
             <div class="card-header text-center">
-                OPEN ORDERS
+                <strong>OPEN ORDERS</strong>
             </div>
             <div class="card-body">
                 <table class="table table-hover">
@@ -64,5 +64,7 @@ export default {
 </script>
 
 <style scoped>
-
+strong {
+    font-weight: 800 !important;
+}
 </style>

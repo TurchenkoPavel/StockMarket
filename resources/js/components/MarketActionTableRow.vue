@@ -3,7 +3,7 @@
         <td scope="row">{{ symbol }}</td>
         <td>{{ info.long_name }}</td>
         <td>{{ info.price.fmt }}</td>
-        <td>{{ info.change_percent.fmt }}</td>
+        <td class="text-right" :class="(info.change_percent.fmt.includes('-')) ? 'text-danger' : 'text-success'">{{ info.change_percent.fmt }}</td>
     </tr>
 </template>
 
@@ -38,5 +38,7 @@ export default {
 </script>
 
 <style scoped>
-
+.text-right {
+    text-align: right;
+}
 </style>

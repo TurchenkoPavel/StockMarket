@@ -2,7 +2,7 @@
     <div>
         <div class="card">
             <div class="card-header text-center">
-                TRADE SETUP
+                <strong>TRADE SETUP</strong>
             </div>
             <div class="card-body">
                 <div class="row">
@@ -12,7 +12,7 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <th scope="row">{{ symbol }}</th>
+                                    <th scope="row " class="symbol-size">{{ symbol }}</th>
                                     <td> {{ info.long_name }} </td>
                                 </tr>
                                 <tr>
@@ -132,4 +132,10 @@ export default {
     min-height: 500px;
 }
 
+strong {
+    font-weight: 800 !important;
+}
+.symbol-size {
+    font-size: 24px;
+}
 </style>

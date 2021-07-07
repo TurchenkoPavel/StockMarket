@@ -20,8 +20,16 @@ export default {
 }
 </script>
 <style>
-
+body {
+    background-color: rgb(126, 176, 186) !important;
+}
 .wrap-content {
     padding-top: 78px;
+}
+.card,
+.card .card-header,
+.card .card-body {
+    background-color: rgb(232, 252, 252) !important;
+    border-color: rgb(143, 180, 181) !important;
 }
 </style>

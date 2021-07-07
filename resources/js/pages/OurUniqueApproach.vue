@@ -21,7 +21,7 @@
                     <template v-else>
                         <tr v-for="(item, idx) in info" :key="idx">
                             <td scope="row">{{ item.text }}</td>
-                            <td>{{ item.link }}</td>
+                            <td><a :href="item.link" target="_blank">Link</a></td>
                         </tr>
                     </template>
                     </tbody>

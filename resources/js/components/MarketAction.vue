@@ -2,7 +2,7 @@
     <div>
         <div class="card">
             <div class="card-header text-center">
-                MARKET ACTION
+                <strong>MARKET TREND</strong>
             </div>
             <div class="card-body">
                 <div class="row mb-2">
@@ -11,7 +11,7 @@
                         <fa v-if="state === 'Downtrend'" icon="arrow-alt-circle-down" class="text-danger display-5"/>
                         <fa v-if="state === 'Sideways'" icon="arrows-alt-h" class="text-primary display-5"/>
                     </div>
-                    <div class="col align-self-center fs-4"><b>{{ state }} Market</b></div>
+                    <div class="col align-self-center fs-4 symbol-size"><b >{{ state }}</b></div>
                 </div>
                 <p class="card-text">{{ info }}</p>
                 <table class="table">
@@ -58,5 +58,12 @@ export default {
 </script>
 
 <style scoped>
-
+strong {
+    font-weight: 800 !important;
+}
+.symbol-size b{
+    color: rgb(108, 117, 125);
+    font-weight: 700 !important;
+    font-size: 24px !important;
+}
 </style>

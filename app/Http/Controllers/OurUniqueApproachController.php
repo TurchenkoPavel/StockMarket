@@ -10,7 +10,7 @@ class OurUniqueApproachController extends Controller
     public function getUniqueApproach()
     {
         $rows = Sheets::spreadsheet(env('TEST_SPREADSHEET_ID'))
-            ->sheet('Our unique approach')
+            ->sheet('Our approach')
             ->get();
 
         $rows->pull(0);

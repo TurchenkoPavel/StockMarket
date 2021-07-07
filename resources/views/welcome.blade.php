@@ -15,6 +15,7 @@
         </style>
 
         <link rel="stylesheet" href="{{ mix('../public/css/_app.css') }}">
+{{--        <link rel="stylesheet" href="{{ mix('/css/_app.css') }}">--}}
         <style>
             body {
                 font-family: 'Nunito', sans-serif;
@@ -28,5 +29,8 @@
         <script src="{{ mix('../public/js/manifest.js') }}"></script>
         <script src="{{ mix('../public/js/vendor.js') }}"></script>
         <script src="{{ mix('../public/js/main.js') }}"></script>
+{{--        <script src="{{ mix('/js/manifest.js') }}"></script>--}}
+{{--        <script src="{{ mix('/js/vendor.js') }}"></script>--}}
+{{--        <script src="{{ mix('/js/main.js') }}"></script>--}}
     </body>
 </html>
