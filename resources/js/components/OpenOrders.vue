@@ -12,11 +12,12 @@
                         <th scope="col">Order</th>
                         <th scope="col">Stop</th>
                         <th scope="col">Limit</th>
+                        <th scope="col">Market</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr v-if="is_loading">
-                        <td colspan="4">
+                        <td colspan="5">
                             <div class="text-center">
                                 <div class="spinner-border" role="status">
                                     <span class="visually-hidden">Загрузка...</span>
@@ -34,6 +35,7 @@
                             <td>{{ item.order }}</td>
                             <td>{{ item.stop }}</td>
                             <td>{{ item.limit }}</td>
+                            <td>{{ item.market }}</td>
                         </tr>
                     </template>
                     </tbody>

@@ -33,4 +33,7 @@ body {
     background-color: rgb(232, 252, 252) !important;
     border-color: rgb(143, 180, 181) !important;
 }
+.accordion-button:not(.collapsed) {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+}
 </style>

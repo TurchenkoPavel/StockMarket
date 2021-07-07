@@ -40,13 +40,13 @@ export default {
 </script>
 
 <style class="scss">
-    .wrap-content {
-        padding-top: 78px;
-    }
-    .sidebar {
-        height: calc(100vh - 78px);
-        position: fixed;
-        min-width: 72px !important;
-        max-width: 72px !important;
-    }
+    /*.wrap-content {*/
+    /*    padding-top: 78px;*/
+    /*}*/
+    /*.sidebar {*/
+    /*    height: calc(100vh - 78px);*/
+    /*    position: fixed;*/
+    /*    min-width: 72px !important;*/
+    /*    max-width: 72px !important;*/
+    /*}*/
 </style>

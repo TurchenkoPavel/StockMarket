@@ -5,27 +5,36 @@
                 <strong>UNIQUE APPROACH</strong>
             </div>
             <div class="card-body">
-                <table class="table">
-                    <thead>
-                    </thead>
-                    <tbody>
-                    <tr v-if="is_loading">
-                        <td colspan="4">
-                            <div class="text-center">
-                                <div class="spinner-border" role="status">
-                                    <span class="visually-hidden">Загрузка...</span>
-                                </div>
+                <div v-if="is_loading" class="text-center">
+                    <div class="spinner-border" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+                <div v-else class="accordion accordion-flush" id="accordion-unique-approach">
+                    <div v-for="(item, idx) in info" :key="idx" class="accordion-item">
+                        <h2 class="accordion-header" :id="'heading-unique-approach-' + idx">
+                            <button
+                                class="accordion-button collapsed fw-bolder"
+                                type="button" data-bs-toggle="collapse"
+                                :data-bs-target="'#collapse-unique-approach-' + idx"
+                                aria-expanded="false"
+                                :aria-controls="'collapse-unique-approach-' + idx"
+                            >
+                                {{ item.question }}
+                            </button>
+                        </h2>
+                        <div
+                            :id="'collapse-unique-approach-' + idx"
+                            class="accordion-collapse collapse"
+                            :aria-labelledby="'heading-unique-approach-' + idx"
+                            data-bs-parent="#accordion-unique-approach"
+                        >
+                            <div class="accordion-body">
+                                {{ item.answer }}
                             </div>
-                        </td>
-                    </tr>
-                    <template v-else>
-                        <tr v-for="(item, idx) in info" :key="idx">
-                            <td scope="row">{{ item.text }}</td>
-                            <td><a :href="item.link" target="_blank">Link</a></td>
-                        </tr>
-                    </template>
-                    </tbody>
-                </table>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

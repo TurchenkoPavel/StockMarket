@@ -10,4 +10,11 @@ use Illuminate\Routing\Controller as BaseController;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+
+    protected $cacheTime = 15;
+
+    public function __construct()
+    {
+        $this->cacheTime = env('CACHE_TIME', 15);
+    }
 }
