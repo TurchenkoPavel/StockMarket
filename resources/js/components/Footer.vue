@@ -15,12 +15,12 @@
                 display or otherwise use or revise any portion of this website.
                 </small>
             </div>
-            <div class="col-sm-4 col-md col-12">Tradin4Livin</div>
+<!--            <div class="col-sm-4 col-md col-12">Tradin4Livin</div>-->
             <div class="col-sm-4 col-md col-12">
-                <div>ag@tradin4livin.com</div>
+                <div><a href="mailto:ag@tradin4livin.com" class="email-font-color">ag@tradin4livin.com</a></div>
 <!--                <div>Phone: 123-123-123</div>-->
             </div>
-            <div class="col-sm-4 col-md col-12">COPYRIGHT&copy; 2021. ALL RIGHTS RESERVED.</div>
+            <div class="col-sm-6 col-md col-12 copyright">COPYRIGHT&copy; 2021. ALL RIGHTS RESERVED.</div>
         </footer>
     </div>
 </template>
@@ -37,5 +37,11 @@ export default {
 
 footer {
     background-color: rgb(232, 252, 252) !important;
+}
+.copyright {
+    font-size: 8px;
+}
+.email-font-color {
+    color: rgb(108, 117, 125) !important;
 }
 </style>
