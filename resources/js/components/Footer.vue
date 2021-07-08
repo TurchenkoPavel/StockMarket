@@ -15,9 +15,12 @@
                 display or otherwise use or revise any portion of this website.
                 </small>
             </div>
-            <div class="col-sm-4 col-md col-12">Alex Gozman</div>
-            <div class="col-sm-4 col-md col-12"><div>alexgozman@gmail.com</div><div>Phone: 123-123-123</div></div>
-            <div class="col-sm-4 col-md col-12">COPYRIGHT &copy; 2021. ALL RIGHT RESERVED.</div>
+            <div class="col-sm-4 col-md col-12">Tradin4Livin</div>
+            <div class="col-sm-4 col-md col-12">
+                <div>ag@tradin4livin.com</div>
+<!--                <div>Phone: 123-123-123</div>-->
+            </div>
+            <div class="col-sm-4 col-md col-12">COPYRIGHT&copy; 2021. ALL RIGHTS RESERVED.</div>
         </footer>
     </div>
 </template>
