@@ -23,7 +23,7 @@ class MarketActionController extends Controller
                 ->get();
 
             $rows->pull(0);
-            $header = ['symbol'];
+            $header = ['symbol', 'name'];
             $values = Sheets::collection($header, $rows);
             return $values->values();
         });

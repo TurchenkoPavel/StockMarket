@@ -24,7 +24,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <market-action-table-row v-for="item in symbols" :key="item.symbol" :symbol="item.symbol">
+                    <market-action-table-row v-for="item in symbols" :key="item.symbol" :symbol="item.symbol" :name_symbol="item.name">
                     </market-action-table-row>
                     </tbody>
                 </table>
