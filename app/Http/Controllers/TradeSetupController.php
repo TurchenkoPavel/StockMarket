@@ -15,7 +15,7 @@ class TradeSetupController extends Controller
         $symbol = $request->input('symbol');
 
         return Cache::remember('symbol_info_'.$symbol, $this->cacheTime, function () use ($symbol) {
-            $yahooProfile = Http::retry(3, 1000)->withHeaders([
+            $yahooProfile = Http::retry(5, 1000)->withHeaders([
                 'x-rapidapi-key' => env('X_RAPIDAPI_KEY'),
                 'x-rapidapi-host' => env('X_RAPIDAPI_HOST')
             ])->get('https://apidojo-yahoo-finance-v1.p.rapidapi.com/stock/v2/get-profile', ['symbol' => $symbol]);
