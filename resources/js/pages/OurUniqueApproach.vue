@@ -11,7 +11,7 @@
                     </div>
                 </div>
                 <div v-else class="accordion accordion-flush" id="accordion-unique-approach">
-                    <div v-for="(item, idx) in info" :key="idx" class="accordion-item">
+                    <div v-for="(item, idx) in info.filter(item => item.answer !== '' && item.question !== '')" :key="idx" class="accordion-item">
                         <h2 class="accordion-header" :id="'heading-unique-approach-' + idx">
                             <button
                                 class="accordion-button collapsed fw-bolder"
@@ -30,7 +30,9 @@
                             data-bs-parent="#accordion-unique-approach"
                         >
                             <div class="accordion-body">
-                                {{ item.answer }}
+                                <p v-for="(answer, index ) in item.answer.split('\n')" :key="index" class="mb-0">
+                                    {{answer}}
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -65,6 +67,9 @@ strong {
 }
 .accordion.accordion-flush {
     background-color: rgb(126, 176, 186);
+}
+.accordion.accordion-flush button{
+    color: rgb(232, 252, 252) !important;
 }
 .accordion.accordion-flush .accordion-body{
     background-color: rgb(232, 252, 252);

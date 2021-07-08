@@ -13,7 +13,6 @@ class OurUniqueApproachController extends Controller
             $rows = Sheets::spreadsheet(env('TEST_SPREADSHEET_ID'))
                 ->sheet('Our approach')
                 ->get();
-
             $rows->pull(0);
             $header = ['question', 'answer'];
             $values = Sheets::collection($header, $rows);

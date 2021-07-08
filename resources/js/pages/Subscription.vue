@@ -71,6 +71,9 @@ strong {
 .accordion.accordion-flush {
     background-color: rgb(126, 176, 186);
 }
+.accordion.accordion-flush button{
+    color: rgb(232, 252, 252) !important;
+}
 .accordion.accordion-flush .accordion-body{
     background-color: rgb(232, 252, 252);
 }
