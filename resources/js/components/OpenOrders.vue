@@ -28,8 +28,9 @@
                     <template v-else>
                         <tr
                             v-for="(item, idx) in open_orders" :key="item.symbol"
-                            :class="{'table-active': idx === selected_idx}"
-                            @click="$emit('update:selected_idx', idx)"
+                            class="cursor-pointer"
+                            :class="{'table-active': (current_type === 'openOrders' && current_symbol &&  current_symbol.symbol === item.symbol)}"
+                            @click="clickOpenOrder(idx, item.symbol, item.order )"
                         >
                             <td scope="row">{{ item.symbol }}</td>
                             <td>{{ item.order }}</td>
@@ -46,6 +47,8 @@
 </template>
 
 <script>
+import {mapGetters} from "vuex";
+
 export default {
     name: "OpenOrders",
     props: {
@@ -60,6 +63,24 @@ export default {
         is_loading: {
             type: Boolean,
             default: () => false
+        }
+    },
+    computed: {
+        ...mapGetters({
+            current_symbol: 'getSymbol',
+            current_type: 'getType',
+        }),
+    },
+    methods: {
+        clickOpenOrder(idx, symbol, order ){
+            this.$emit('update:selected_idx', idx)
+            this.$store.commit('setSymbol', {
+                symbol: {
+                    symbol: symbol,
+                    name: order,
+                },
+                type: 'openOrders',
+            })
         }
     }
 }
