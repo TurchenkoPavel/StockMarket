@@ -60,6 +60,7 @@ export default {
 <style scoped>
 strong {
     font-weight: 800 !important;
+    font-size: 19px;
 }
 .symbol-size b{
     color: rgb(108, 117, 125);

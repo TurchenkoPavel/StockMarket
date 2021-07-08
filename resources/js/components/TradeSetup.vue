@@ -134,6 +134,7 @@ export default {
 
 strong {
     font-weight: 800 !important;
+    font-size: 19px;
 }
 .symbol-size {
     font-size: 24px;

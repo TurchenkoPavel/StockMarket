@@ -61,5 +61,12 @@ export default {
 <style scoped>
 strong {
     font-weight: 800 !important;
+    font-size: 19px;
+}
+.accordion.accordion-flush {
+    background-color: rgb(126, 176, 186);
+}
+.accordion.accordion-flush .accordion-body{
+    background-color: rgb(232, 252, 252);
 }
 </style>

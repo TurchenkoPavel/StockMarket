@@ -28,9 +28,10 @@ export default {
 }
 header {
     background-color: rgb(232, 252, 252) !important;
+    height: 110px;
 }
 a {
-  font-size: 18px !important;
+  font-size: 27px !important;
 }
 .router-link-active {
     color: black !important;
@@ -38,9 +39,9 @@ a {
 }
 img {
     position: absolute;
-    top: -55px;
-    left: -25px;
-    width: 300px;
+    top: -87px;
+    left: -46px;
+    width: 450px;
 }
 </style>
 

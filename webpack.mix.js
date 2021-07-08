@@ -12,18 +12,18 @@ const mix = require('laravel-mix');
  */
 
 mix
-    .webpackConfig({
-        output: {
-            publicPath: '/public/',
-            filename: '[name].js',
-            chunkFilename: 'js/[name].js',
-        },
-    })
-    .options({
-        postCss: [
-            require('autoprefixer'),
-        ],
-    })
+    // .webpackConfig({
+    //     output: {
+    //         publicPath: '/public/',
+    //         filename: '[name].js',
+    //         chunkFilename: 'js/[name].js',
+    //     },
+    // })
+    // .options({
+    //     postCss: [
+    //         require('autoprefixer'),
+    //     ],
+    // })
     .copyDirectory('resources/js/assets', 'images')
     .js('resources/js/main.js', '/js')
     .vue()

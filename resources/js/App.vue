@@ -25,7 +25,7 @@ body {
     background-color: rgb(126, 176, 186) !important;
 }
 .wrap-content {
-    padding-top: 78px;
+    padding-top: 118px;
 }
 .card,
 .card .card-header,

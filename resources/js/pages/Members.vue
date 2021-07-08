@@ -17,9 +17,9 @@
                         You entered an incorrect password. Contact the administrator.
                     </div>
                 </div>
-                <div class="mb-3">
-                    <a href="#">Forgot password?</a>
-                </div>
+<!--                <div class="mb-3">-->
+<!--                    <a href="#">Forgot password?</a>-->
+<!--                </div>-->
                 <button type="submit" class="btn btn-primary" @click.prevent="is_valid = false">Submit</button>
             </form>
         </div>
@@ -38,5 +38,6 @@ export default {
 <style scoped>
 strong {
     font-weight: 800 !important;
+    font-size: 19px;
 }
 </style>

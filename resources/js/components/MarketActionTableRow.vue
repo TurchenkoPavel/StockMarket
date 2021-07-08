@@ -1,7 +1,7 @@
 <template>
     <tr>
         <td scope="row">{{ symbol }}</td>
-        <td>{{ info.long_name }}</td>
+            <td>{{ (info.long_name) ? info.long_name : info.short_name }}</td>
         <td>{{ info.price.fmt }}</td>
         <td class="text-right" :class="(info.change_percent.fmt.includes('-')) ? 'text-danger' : 'text-success'">{{ info.change_percent.fmt }}</td>
     </tr>

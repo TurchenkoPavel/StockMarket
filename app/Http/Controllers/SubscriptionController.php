@@ -15,7 +15,7 @@ class SubscriptionController extends Controller
                 ->get();
 
             $rows->pull(0);
-            $header = ['name', 'descriptopn', 'price'];
+            $header = ['name', 'descriptopn', 'price', 'link'];
             $values = Sheets::collection($header, $rows);
             return $values->values();
         });

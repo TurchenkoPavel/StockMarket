@@ -32,6 +32,9 @@
                             <div class="accordion-body">
                                 <p>{{ item.descriptopn }}</p>
                                 <p class="fw-bolder">Price {{ item.price }}$</p>
+                                <p class="fw-bolder mb-0">
+                                    <a :href="item.link" target="_blank">Link</a>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -62,5 +65,13 @@ export default {
 <style scoped>
 strong {
     font-weight: 800 !important;
+    font-size: 19px;
+}
+
+.accordion.accordion-flush {
+    background-color: rgb(126, 176, 186);
+}
+.accordion.accordion-flush .accordion-body{
+    background-color: rgb(232, 252, 252);
 }
 </style>

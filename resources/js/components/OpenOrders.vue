@@ -68,5 +68,6 @@ export default {
 <style scoped>
 strong {
     font-weight: 800 !important;
+    font-size: 19px;
 }
 </style>
