@@ -23,7 +23,7 @@ class MarketActionController extends Controller
                 ->get();
 
             $rows->pull(0);
-            $header = ['symbol', 'name'];
+            $header = ['symbol', 'name', 'same_symbol_in_tradingview'];
             $values = Sheets::collection($header, $rows);
             return $values->values();
         });

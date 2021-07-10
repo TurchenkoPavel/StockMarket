@@ -18,6 +18,7 @@ export default {
     props: {
         symbol: String,
         name_symbol: String,
+        symbol_trading_view: String,
     },
     data: () => ({
         info: {
@@ -49,6 +50,7 @@ export default {
             this.$store.commit('setSymbol', {
                 symbol: {
                     symbol: this.symbol,
+                    symbol_trading_view: this.symbol_trading_view,
                     name: this.name_symbol,
                 },
                 type: 'marketTrend',

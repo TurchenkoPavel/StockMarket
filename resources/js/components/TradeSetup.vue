@@ -150,7 +150,7 @@ export default {
             deep: true,
             handler(newVal){
                 this.getData(newVal.symbol);
-                this.result_options = Object.assign({ symbol: newVal.symbol}, this.trading_options)
+                this.result_options = Object.assign({ symbol: newVal.symbol_trading_view}, this.trading_options)
 
             }
         }

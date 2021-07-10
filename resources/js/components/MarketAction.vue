@@ -24,7 +24,11 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <market-action-table-row v-for="item in symbols" :key="item.symbol" :symbol="item.symbol" :name_symbol="item.name">
+                    <market-action-table-row v-for="item in symbols"
+                                             :key="item.symbol"
+                                             :symbol="item.symbol"
+                                             :name_symbol="item.name"
+                                             :symbol_trading_view="item.same_symbol_in_tradingview">
                     </market-action-table-row>
                     </tbody>
                 </table>
@@ -52,6 +56,7 @@ export default {
         });
         axios.get('/api/get-market-action-symbols').then(response => {
             this.symbols = response.data;
+            console.log(this.symbols)
         });
     }
 }
