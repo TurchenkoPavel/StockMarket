@@ -13,7 +13,11 @@
                     </div>
                     <div class="col align-self-center fs-4 symbol-size"><b >{{ state }}</b></div>
                 </div>
-                <p class="card-text">{{ info }}</p>
+                <div v-if="info" class="card-text">
+                    <p v-for="(infos, index ) in info.split('\n')" :key="index" class="mb-0">
+                        {{ infos }}
+                    </p>
+                </div>
                 <table class="table">
                     <thead>
                     <tr>
