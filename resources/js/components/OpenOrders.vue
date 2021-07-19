@@ -2,7 +2,7 @@
     <div>
         <div class="card">
             <div class="card-header text-center">
-                <strong>OPEN ORDERS</strong>
+                <strong>OPEN ORDERS AND A WATCH LIST</strong>
             </div>
             <div class="card-body">
                 <table class="table table-hover">
