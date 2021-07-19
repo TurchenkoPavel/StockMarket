@@ -56,7 +56,6 @@ export default {
         });
         axios.get('/api/get-market-action-symbols').then(response => {
             this.symbols = response.data;
-            console.log(this.symbols)
         });
     }
 }

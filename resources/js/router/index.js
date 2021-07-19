@@ -9,14 +9,14 @@ const routes = [
     component: Home
   },
   {
-    path: '/our-unique-approach',
-    name: 'Our.unique.approach',
-    component: () => import(/* webpackChunkName: "about" */ '../pages/OurUniqueApproach.vue')
+    path: '/trading-rules',
+    name: 'Trading.rules',
+    component: () => import(/* webpackChunkName: "about" */ '../pages/TradingRules.vue')
   },
   {
-    path: '/subscription',
-    name: 'Subscription',
-    component: () => import(/* webpackChunkName: "about" */ '../pages/Subscription.vue')
+    path: '/subscriptions',
+    name: 'Subscriptions',
+    component: () => import(/* webpackChunkName: "about" */ '../pages/Subscriptions.vue')
   },
   {
     path: '/members',

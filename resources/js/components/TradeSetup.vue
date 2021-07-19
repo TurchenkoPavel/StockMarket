@@ -37,8 +37,11 @@
                                     <td> {{info.market_cap.fmt}} </td>
                                 </tr>
                                 <tr>
-                                    <td colspan="2">
-                                        <span class="fw-bolder">Trade Setup: </span>{{ trade_setup }}
+                                    <td colspan="2" v-if="trade_setup">
+                                        <span class="fw-bolder">Trade Setup: </span>
+                                        <p v-for="(trade, index ) in trade_setup.split('\n')" :key="index" class="mb-0">
+                                            {{trade}}
+                                        </p>
                                     </td>
                                 </tr>
                             </tbody>

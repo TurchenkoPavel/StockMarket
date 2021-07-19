@@ -30,7 +30,9 @@
                             data-bs-parent="#accordion-subscriptions"
                         >
                             <div class="accordion-body">
-                                <p>{{ item.descriptopn }}</p>
+                                <p v-for="(descriptopn, index ) in item.descriptopn.split('\n')" :key="index" class="mb-0">
+                                    {{descriptopn}}
+                                </p>
                                 <p class="fw-bolder">Price {{ item.price }}$</p>
                                 <p class="fw-bolder mb-0">
                                     <a :href="item.link" target="_blank">Link</a>
@@ -48,7 +50,7 @@
 import axios from "axios";
 
 export default {
-    name: "Subscription",
+    name: "Subscriptions",
     data: () => ({
         info: [],
         is_loading: false,

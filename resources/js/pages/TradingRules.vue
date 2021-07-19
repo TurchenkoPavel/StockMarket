@@ -2,7 +2,7 @@
     <div>
         <div class="card">
             <div class="card-header text-center">
-                <strong>UNIQUE APPROACH</strong>
+                <strong>TRADING RULES</strong>
             </div>
             <div class="card-body">
                 <div v-if="is_loading" class="text-center">
@@ -46,7 +46,7 @@
 import axios from "axios";
 
 export default {
-    name: "OurUniqueApproach",
+    name: "TradingRules",
     data: () => ({
         info: [],
         is_loading: false,

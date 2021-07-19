@@ -7,8 +7,8 @@
             </a>
             <ul class="nav col-auto col-md-auto mb-2 justify-content-center mb-md-0">
                 <li><router-link :to="{name: 'Home'}" class="nav-link px-2 link-secondary">Home</router-link></li>
-                <li><router-link :to="{name: 'Our.unique.approach'}" class="nav-link px-2 link-secondary">Our approach</router-link></li>
-                <li><router-link :to="{name: 'Subscription'}" class="nav-link px-2 link-secondary">Subscription</router-link></li>
+                <li><router-link :to="{name: 'Trading.rules'}" class="nav-link px-2 link-secondary">Trading Rules</router-link></li>
+                <li><router-link :to="{name: 'Subscriptions'}" class="nav-link px-2 link-secondary">Subscriptions</router-link></li>
                 <li><router-link :to="{name: 'Members'}" class="nav-link px-2 link-secondary">Members</router-link></li>
             </ul>
         </header>

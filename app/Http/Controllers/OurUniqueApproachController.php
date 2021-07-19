@@ -11,7 +11,7 @@ class OurUniqueApproachController extends Controller
     {
         return Cache::remember('our_approach', $this->cacheTime, function () {
             $rows = Sheets::spreadsheet(env('TEST_SPREADSHEET_ID'))
-                ->sheet('Our approach')
+                ->sheet('Trading Rules')
                 ->get();
             $rows->pull(0);
             $header = ['question', 'answer'];

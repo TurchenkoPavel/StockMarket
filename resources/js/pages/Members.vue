@@ -1,7 +1,7 @@
 <template>
     <div class="card">
         <div class="card-header text-center">
-            <strong>MEMBERSHIP</strong>
+            <strong>Log In</strong>
         </div>
         <div class="card-body">
             <form>
